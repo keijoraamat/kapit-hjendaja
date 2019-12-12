@@ -1,4 +1,4 @@
-name: Continious Int
+name: Continious Integration
 
 on: [push]
 

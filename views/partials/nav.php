@@ -1,10 +1,8 @@
 <nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/about/culture">About Our Culture</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/feedback">Feed back</a></li>
-        <li><a href="/admin">Admin</a></li>
-    </ul>
+    <table>
+        <td><a href="/">Avaleht</a></td>
+        <td><a href="/about">Meist</a></td>
+        <td><a href="/contact">Kontakt</a></td>
+        <td><a href="/countries">Riigid</a></td>
+    </table>
 </nav>
