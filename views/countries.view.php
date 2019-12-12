@@ -22,7 +22,7 @@
     <tr align="center">
         <td><?php echo $country->name;?></td>
         <td><?php echo $country->time_added;?></td>
-        <td><a href="#">*</td>
+        <td><a href="modify?id=<?php echo $country->id; ?>">*</td>
         <td><a href="deletecountry?id=<?php echo $country->id; ?>">X</td>
         
     </tr>

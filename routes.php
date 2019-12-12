@@ -6,4 +6,6 @@
     $router->get('countries', 'CountriesController@index');
     $router->post('addcountry', 'CountriesController@add');
     $router->get('deletecountry', 'CountriesController@delete');
+    $router->get('modify', 'CountriesController@edit');
 
+    

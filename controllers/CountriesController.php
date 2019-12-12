@@ -39,5 +39,13 @@ class CountriesController {
         return view('countries', ['countries' => $countries]);
     }
 
+    public function edit() {
+
+        global $app;
+        $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+        $countries = $app['database']->selectById('country', $id);
+        return view('modify', ['countries'=>$countries]);
+    }
+
 
 }
