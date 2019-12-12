@@ -1,6 +1,9 @@
 name: Continious Int
 
-#on: [push]
+on:
+  push:
+    branches:
+    - master
 
 jobs:
   build:
