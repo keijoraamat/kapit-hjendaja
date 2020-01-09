@@ -1,5 +1,5 @@
 <?php require('partials/head.php'); ?>
 
-    <h1>Contact Us</h1>
+    <?php print_r($countries);?>
 
 <?php require('partials/footer.php'); ?>

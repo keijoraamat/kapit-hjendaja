@@ -1,21 +1,22 @@
 <?php
 
-class PagesController
-{
+class PagesController {
 
-    public function home()
-    {
+    public function home() {
+
         return view('index');
     }
 
-    public function about()
-    {
-        $company = 'Plärakasts';
+    public function about() {
+
+        $company = 'Kuressaare Ametikool';
+
         return view('about', ['company' => $company]);
     }
-  
-    public function contact()
-    {
+
+    public function contact() {
+
         return view('contact');
     }
+
 }

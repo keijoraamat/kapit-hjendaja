@@ -13,23 +13,36 @@ class QueryBuilder
     {
         $statement = $this->pdo->prepare("select * from {$table}");
         $statement->execute();
-
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+    public function selectById($table, $id = 0)
+    {
+        $statement = $this->pdo->prepare("select * from {$table} WHERE id= :id");
+        $statement->execute([':id' => $id]);
+        $result = $statement->fetchAll(PDO::FETCH_CLASS);
+        return  empty($result) ? [] : reset($result);
+    }
 
-    public function insert($table, $parameters) {
+    public function deleteById($table, $id = 0)
+    {
+        $statement = $this->pdo->prepare("DELETE  FROM {$table} WHERE id= :id");
+        return $statement->execute([':id' => $id]);
+    }
+
+    public function insert ($table, $parameters) {
         $sql = sprintf(
             'INSERT INTO %s (%s) VALUES (%s)',
             $table,
             implode(', ', array_keys($parameters)),
             ':' . implode(', :', array_keys($parameters))
-             );
+        );
 
-             try {
-                $statement = $this->pdo->prepare($sql);
-                $statement->execute($parameters);
-             } catch (\Exception $e) {
-                die($e->getMessage());
-             }
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($parameters);
+        } catch (Exception $e) {
+            die('Whoops!');
+        }
+
     }
 }

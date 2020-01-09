@@ -1,7 +1,5 @@
 <?php require('partials/head.php'); ?>
 
-<h1>My Tasks</h1>
-
-
+<h1>Avaleht</h1>
 
 <?php require('partials/footer.php'); ?>
