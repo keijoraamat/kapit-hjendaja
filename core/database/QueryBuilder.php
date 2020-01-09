@@ -45,4 +45,11 @@ class QueryBuilder
         }
 
     }
+
+    public function getUserByEmail ($table, $username) {
+        $statement = $this->pdo->prepare("select * from {$table} WHERE username= :username");
+        $statement->execute([':username' => $username]);
+        $result = $statement->fetchAll(PDO::FETCH_CLASS);
+        return  empty($result) ? [] : reset($result);
+    }
 }

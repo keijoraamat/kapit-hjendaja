@@ -4,6 +4,6 @@
 
     <input name="username"><br>
     <input type="password" name="password"> <br>
-    <input type="submit" value="Logi sisse">
+    <input name="login" type="submit" value="Logi sisse">
 
 </form>
