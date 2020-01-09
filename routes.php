@@ -7,5 +7,5 @@
     $router->post('addcountry', 'CountriesController@add');
     $router->get('deletecountry', 'CountriesController@delete');
     $router->get('modify', 'CountriesController@edit');
+    $router->get('login', 'UsersController@index');
 
-    

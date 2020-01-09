@@ -1,10 +1,9 @@
 <?php
 
 class UsersController { 
-    public function login () {
+    public function index () {
 
-        #return view()
+        return view( 'login');
     }
-
 
 }
