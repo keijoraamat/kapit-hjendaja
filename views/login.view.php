@@ -2,7 +2,8 @@
 
 <form method="POST" action="/login">
 
-    <input name="username">
-    <input type="password" name="password">
+    <input name="username"><br>
+    <input type="password" name="password"> <br>
+    <input type="submit" value="Logi sisse">
 
 </form>

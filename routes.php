@@ -8,4 +8,4 @@
     $router->get('deletecountry', 'CountriesController@delete');
     $router->get('modify', 'CountriesController@edit');
     $router->get('login', 'UsersController@index');
-
+    $router->post('login', 'UsersController@login');
