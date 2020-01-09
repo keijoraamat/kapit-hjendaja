@@ -24,7 +24,13 @@ class UsersController {
             }
             
             if ( empty($error)) {
-                $this -> auth($username, $password);
+                $user = $this -> auth($username, $password);
+
+                if ($user) {
+                    echo 'login user in!';
+                } else {
+                    echo 'username or password wrong';
+                }
             }
         }
 
@@ -36,8 +42,13 @@ class UsersController {
         global $app;
 
         $user = $app['database']->getUserByEmail('users', $username);
-
-        print_r($user);
+        if (!empty($user)) {
+            //TODO password verify
+            if ($user->password === $password) {
+                return$user; 
+            }
+        }
+        return false;
     }
 
 }
