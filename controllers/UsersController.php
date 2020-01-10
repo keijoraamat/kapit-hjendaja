@@ -53,9 +53,10 @@ class UsersController {
         global $app;
 
         $user = $app['database']->getUserByEmail('users', $username);
+       
         if (!empty($user)) {
-            //TODO password verify
-            if ($user->password === $password) {
+    
+            if (password_verify($password, $user->password)) {
                 return$user; 
             }
         }
