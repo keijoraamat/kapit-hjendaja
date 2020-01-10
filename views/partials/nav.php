@@ -7,7 +7,6 @@
         <td><a href="/login">loogi siise</a></td>
     </table>
     <?php if ($_SESSION["username"]) : ?>
-        
     Sisse logitud kui: <b>
     <?php 
     echo $_SESSION["username"]; 

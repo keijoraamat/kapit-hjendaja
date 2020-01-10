@@ -1,5 +1,7 @@
 <?php require('partials/head.php'); ?>
-
+<?php if ($_SESSION["username"]) : ?>
+        
+        
 <h1>Riigi lisamine</h1>
 
 <form method="POST" action="/addcountry">
@@ -7,7 +9,7 @@
     <input name="country_name">
 
 </form>
-
+<?php endif; ?>
 <table>
 <?php if (!empty($countries)) : ?>
 <thead>
