@@ -9,3 +9,4 @@
     $router->get('modify', 'CountriesController@edit');
     $router->get('login', 'UsersController@index');
     $router->post('login', 'UsersController@login');
+    $router->get('logout', 'UsersController@logout');

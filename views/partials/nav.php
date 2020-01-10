@@ -6,8 +6,12 @@
         <td><a href="/countries">Riigid</a></td>
         <td><a href="/login">loogi siise</a></td>
     </table>
+    <?php if ($_SESSION["username"]) : ?>
+        
     Sisse logitud kui: <b>
     <?php 
     echo $_SESSION["username"]; 
     ?> </b>
+     <a href="/logout">logi välja</a>
+     <?php endif; ?>
 </nav>

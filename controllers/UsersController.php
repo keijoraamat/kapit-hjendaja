@@ -43,9 +43,9 @@ class UsersController {
             }
         }
 
-        print_r($_SESSION);
-        print_r($_REQUEST);
-        print_r($error);
+        #print_r($_SESSION);
+        #print_r($_REQUEST);
+        #print_r($error);
         return view('index');
     }
 
@@ -61,6 +61,11 @@ class UsersController {
             }
         }
         return false;
+    }
+
+    public function logout () {
+        session_destroy();
+        return view('login');
     }
 
 }
