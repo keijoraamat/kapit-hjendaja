@@ -14,16 +14,20 @@
     <tr>
         <th>Name</th>
         <th>Äded</th>
+        <?php if ($_SESSION["is_admin"]) : ?>
         <th>modify</th>
         <th>Löschen</th>
+        <?php endif; ?>
     </tr>
     </thead>
 <?php foreach ( $countries as $country ) { ?>
     <tr align="center">
         <td><?php echo $country->name;?></td>
         <td><?php echo $country->time_added;?></td>
+        <?php if ($_SESSION["is_admin"]) : ?>
         <td><a href="modify?id=<?php echo $country->id; ?>">*</td>
         <td><a href="deletecountry?id=<?php echo $country->id; ?>">X</td>
+        <?php endif; ?>
         
     </tr>
 <?php } ?>

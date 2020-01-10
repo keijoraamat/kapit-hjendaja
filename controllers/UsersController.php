@@ -28,10 +28,10 @@ class UsersController {
 
                 if ($user) {
                     if (($user->role)==='administrator') {
-                        $_SESSION["role"]="administrator";
+                        $_SESSION["is_admin"]=true;
                         $_SESSION["username"]=$user->username;
                     }
-                    $_SESSION["role"]="user";
+                    $_SESSION["is_user"]=true;
                     $_SESSION["username"]=$user->username;
                     echo $user->role;
                 } else {
