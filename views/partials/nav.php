@@ -6,4 +6,8 @@
         <td><a href="/countries">Riigid</a></td>
         <td><a href="/login">loogi siise</a></td>
     </table>
+    Sisse logitud kui: <b>
+    <?php 
+    echo $_SESSION["username"]; 
+    ?> </b>
 </nav>

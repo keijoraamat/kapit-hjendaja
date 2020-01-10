@@ -22,20 +22,31 @@ class UsersController {
             if ( empty($password)) {
                 $error['password'] = 'salasõna puudu';
             }
-            
+    
             if ( empty($error)) {
                 $user = $this -> auth($username, $password);
 
                 if ($user) {
-                    echo 'login user in!';
+                    if (($user->role)==='administrator') {
+                        $_SESSION["role"]="administrator";
+                        $_SESSION["username"]=$user->username;
+                    }
+                    $_SESSION["role"]="user";
+                    $_SESSION["username"]=$user->username;
+                    echo $user->role;
                 } else {
                     echo 'username or password wrong';
+                    session_destroy();
                 }
+            } else {
+                session_destroy();
             }
         }
 
         print_r($_SESSION);
         print_r($_REQUEST);
+        print_r($error);
+        return view('index');
     }
 
     public function auth ($username, $password) {
