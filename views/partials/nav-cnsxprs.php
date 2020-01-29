@@ -14,8 +14,8 @@
      <a href="/logout">logi välja</a>
      <?php endif; ?>
     <?php if (!$_SESSION["username"]) : ?>
-        <td> <a href="/register">Registreeri</a> /
-        <a href="/login">logi sisse</a></td>
+        <a href="/register">registreeri</a>
+        <td><a href="/login">Logi sisse</a></td>
      <?php endif; ?>
      </table>
 </nav>

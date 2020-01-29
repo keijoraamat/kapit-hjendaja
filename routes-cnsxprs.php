@@ -11,4 +11,3 @@
     $router->post('login', 'UsersController@login');
     $router->get('logout', 'UsersController@logout');
     $router->get('register', 'UsersController@register');
-    $router->post('register', 'UsersController@registersubmit');
